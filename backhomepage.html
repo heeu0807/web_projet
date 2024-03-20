@@ -1,42 +1,146 @@
-$<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>購物網站後台</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 引入 Font Awesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+  header {
+    background-color: transparent; /* 設置背景為透明 */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  }
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
+  .header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+  .logo {
+    color: #007bff; /* 改變圖標顏色 */
+    font-size: 60px; /* 放大圖標 */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s; /* 添加過渡效果 */
+  }
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
-</html>
+  .logo:hover {
+    color: #0056b3; /* 改變圖標顏色（懸停時） */
+  }
+
+  .exit-btn {
+    color: #007bff; /* 改變按鈕顏色 */
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid #007bff; /* 改變按鈕邊框顏色 */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* 添加過渡效果 */
+  }
+
+  .exit-btn:hover {
+    background-color: #0056b3; /* 改變按鈕背景色（懸停時） */
+    color: #fff; /* 改變按鈕文字顏色（懸停時） */
+  }
+
+  h1 {
+    font-size: 40px; /* 放大標題 */
+    text-align: center;
+    margin-bottom: 40px; /* 增加下方的空間 */
+    margin-top: 20px; /* 增加上方的空間 */
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 5px; /* 添加圓角 */
+    transition: background-color 0.3s, color 0.3s; /* 添加過渡效果 */
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3; /* 改變按鈕背景色（懸停時） */
+    border-color: #0056b3; /* 改變按鈕邊框顏色（懸停時） */
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  .btn-danger:hover {
+    background-color: #c82333; /* 改變按鈕背景色（懸停時） */
+    border-color: #bd2130; /* 改變按鈕邊框顏色（懸停時） */
+  }
+
+  @media (max-width: 767.98px) {
+    .btn {
+      font-size: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content container">
+    <!-- 使用 Font Awesome 圖標 -->
+    <a href="#" class="logo"><i class="fas fa-home"></i></a>
+    <a href="#" class="exit-btn">逃脫通道</a>
+  </div>
+</header>
+
+<div class="container">
+  <h1>產品管理</h1>
+
+  <a href="#" class="btn btn-primary mb-3">新增產品</a>
+
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>ID</th>
+        <th>名稱</th>
+        <th>價格</th>
+        <th>庫存</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>產品1</td>
+        <td>$10.00</td>
+        <td>100</td>
+        <td>
+          <button class="btn btn-primary">編輯</button>
+          <button class="btn btn-danger">刪除</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>產品2</td>
+        <td>$20.00</td>
+        <td>50</td>
+        <td>
+        <button class="btn btn-primary">編輯</button>
+        <button class="btn btn-danger">刪除</button>
+        </td>
+        </tr>
+        <!-- 其他產品的資訊 -->
+        </tbody>
+        
+          </table>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+       

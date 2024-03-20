@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>播放音頻</title>
+<style>
+  /* 調整區域的樣式 */
+  .play-area {
+    cursor: pointer;
+    margin: 10px;
+    float: left;
+  }
+
+  /* 圖片的樣式 */
+  .play-image {
+    width: 200px;
+    height: 200px;
+  }
+</style>
+</head>
+<body>
+
+<!-- 在這個區域內觸發播放音樂 -->
+<img id="play-area" class="play-area play-image" src="1704060738117.jpeg" alt="點擊這裡播放音樂">
+
+<audio id="audio" src="better-day-186374.mp3"></audio>
+
+<script>
+// 取得播放音樂的元素
+var audio = document.getElementById("audio");
+
+// 取得觸發播放的圖片區域
+var playArea = document.getElementById("play-area");
+
+// 設置初始狀態為播放音樂
+var playMusic = true;
+
+// 監聽圖片區域的點擊事件和觸摸事件
+playArea.addEventListener("click", function(event) {
+  if (playMusic) {
+    // 播放音樂
+    audio.play();
+    // 將狀態設置為已播放音樂
+    playMusic = false;
+  } else {
+    // 暫停音樂
+    audio.pause();
+    // 將狀態設置為已停止音樂
+    playMusic = true;
+    // 重新導向到另一個網頁
+    window.location.href = "home.html";
+  }
+});
+
+playArea.addEventListener("touchstart", function(event) {
+  event.preventDefault(); // 防止預設行為，如滾動
+
+  if (playMusic) {
+    // 播放音樂
+    audio.play();
+    // 將狀態設置為已播放音樂
+    playMusic = false;
+  } else {
+    // 暫停音樂
+    audio.pause();
+    // 將狀態設置為已停止音樂
+    playMusic = true;
+    // 重新導向到另一個網頁
+    window.location.href = "另一個網頁的URL";
+  }
+});
+</script>
+
+</body>
+</html>
