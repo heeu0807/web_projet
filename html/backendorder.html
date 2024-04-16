@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單管理</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0faff; /* 背景色改為淺藍色 */
+        }
+        .container {
+            background-color: #ffffff; /* 背景色改為白色 */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">訂單管理</h2>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="輸入訂單關鍵字">
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary btn-block">搜尋</button> <!-- 按鈕置中並填滿列寬 -->
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>訂單編號</th>
+                    <th>訂購時間</th>
+                    <th>訂單狀態</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>2024-04-12 10:30</td>
+                    <td>待處理</td>
+                    <td><button class="btn btn-primary">查看詳情</button></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>2024-04-11 15:20</td>
+                    <td>已發貨</td>
+                    <td><button class="btn btn-primary">查看詳情</button></td>
+                </tr>
+                <!-- 其他訂單行 -->
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">上一頁</a>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">1 <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">下一頁</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
