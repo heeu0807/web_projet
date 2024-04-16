@@ -16,13 +16,130 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style type="text/css">
+            .productinfo{
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 140px;
+            }
+            .bg-img{
+                background-position: center center;
+                background-size: cover;
+                
+            }
+            .single_product_details_area{
+                position: relative;
+                z-index: 100;
+            }
+            .section-padding-40-0{
+                padding-top: 40px;
+                padding-bottom: 0;
+            }
+            .mb-5{
+                margin-bottom: 3rem !important;
+            }
+            .fs-2{
+                font-size: 2rem !important;
+            }
+            .fw-bold{
+                font-weight: 600 !important;
+            }
+
+        </style>
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="test fish.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    布袋阿嬤的漁貨鋪
+                </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="login.html" class="btn btn-link">會員登入</a>
+                        <a href="shoppingcar.html" class="btn btn-link">購物車</a>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+
         </header>
-        <main></main>
+        <main>
+            <div class="productinfo bg-img" style="background-image: url(background.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="page-title text-center">
+                                <h2>商品資訊</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="single_product_details_area section-padding-40-0 mb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-auto col-lg-7">
+                            <img src="background.jpg" alt="" class="img-fluid rouned-img">
+                        </div>
+                        <div class="col-md col-lg-5">
+                            <div class="fs-2 fw_bold">商品名稱</div>
+                            <div class="mb-4 border-3 bg-white rounded border-start border-warning p-3 text-dark fs-lg-4 fs-mobile-5">商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹商品介紹</div>
+                            <div class="row">
+                                <div class="col fs-2">價格
+                                </div>
+                                <div class="col">
+                                    <div class="input-group">
+                                        <select class="form-control mr-1">
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="3">4</option>
+                                          <option value="3">5</option>
+                                          <option value="3">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary">加入購物車</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>    
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
