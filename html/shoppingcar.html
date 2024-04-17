@@ -16,13 +16,205 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style type="text/css">
+            .breadcumb_area{
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 140px;
+            }
+            .bg-img{
+                background-position: center center;
+                background-size: cover;
+            }
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .mb-50{
+                margin-bottom: 50px !important;
+            }
+            .table-responsive{
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+            }
+            .text-center{
+                text-align: center !important;
+            }
+            .table-content table{
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            .table-cart table{
+                min-width: 1200px;
+            }
+            .table{
+                width: 100%;
+            }
+            .table-warning{
+                background-color: #ffeeba;
+            }
+            .table-content table thead th{
+                color: #666;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1;
+                padding: 18px 0;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .tr{
+                display: table-row;
+                vertical-align: inherit;
+                unicode-bidi: isolate;
+                border-color: inherit;
+            }
+
+        </style>
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="test fish.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    布袋阿嬤的漁貨鋪
+                </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="login.html" class="btn btn-link">會員登入</a>
+                        <a href="shoppingcar.html" class="btn btn-link">購物車</a>
+                    </form>
+                  </div>
+                </div>
+              </nav>
         </header>
-        <main></main>
+        <main>
+            <div class="breadcumb_area bg-img" style="background-image: url(background.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="page-title text-center">
+                                <h2>購物車</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="checkout_area section-padding-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                            <div class="table-content table-responsive table-cart mb-50">
+                                <div class="mb-30">
+                                    <h4 class="catagory-left">購物車清單</h4>
+                                </div>
+                                <table class="text-center">
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th class="product-thumbnail" colspan="2">商品</th>
+                                            <th class="product-price" width="15%">單價</th>
+                                            <th class="product-quantity" width="10%">數量</th>
+                                            <th class="product-total" width="15%">小計</th>
+                                            <th class="product-remove" width="10%">刪除</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="card mt-3">
+                                <div class="card-header">訂購人資訊</div>
+                                    <div class="card-body">
+                                        <form  class="needs-validation" novalidate>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputname">姓名</label>
+                                                    <input type="name" class="form-control" id="inputname" placeholder="請輸入姓名" required>
+                                                    <div class="invalid-feedback">
+                                                    請輸入姓名
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">Email</label>
+                                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                                                    <div class="invalid-feedback">
+                                                    請輸入Email
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputphone">電話</label>
+                                                    <input type="text" class="form-control" id="inputphone" placeholder="0987654321" required>
+                                                    <div class="invalid-feedback">
+                                                    請輸入電話
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="inputCity">城市</label>
+                                                    <input type="text" class="form-control" id="inputCity" placeholder="台北市" required>
+                                                    <div class="invalid-feedback">
+                                                    請輸入電話
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="inputZip">郵遞區號</label>
+                                                    <input type="text" class="form-control" id="inputZip" required>
+                                                    <div class="invalid-feedback">
+                                                    請輸入郵遞區號
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputAddress">地址</label>
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="忠孝東路的左邊" required>
+                                                <div class="invalid-feedback">
+                                                請輸入地址
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-primary" type="submit">確認付帳</button>   
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
@@ -38,5 +230,28 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+        </script>
+        
     </body>
 </html>
