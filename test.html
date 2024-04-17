@@ -1,76 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>播放音頻</title>
-<style>
-  /* 調整區域的樣式 */
-  .play-area {
-    cursor: pointer;
-    margin: 10px;
-    float: left;
-  }
-
-  /* 圖片的樣式 */
-  .play-image {
-    width: 200px;
-    height: 200px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單管理</title>
 </head>
 <body>
-
-<!-- 在這個區域內觸發播放音樂 -->
-<img id="play-area" class="play-area play-image" src="1704060738117.jpeg" alt="點擊這裡播放音樂">
-
-<audio id="audio" src="better-day-186374.mp3"></audio>
-
-<script>
-// 取得播放音樂的元素
-var audio = document.getElementById("audio");
-
-// 取得觸發播放的圖片區域
-var playArea = document.getElementById("play-area");
-
-// 設置初始狀態為播放音樂
-var playMusic = true;
-
-// 監聽圖片區域的點擊事件和觸摸事件
-playArea.addEventListener("click", function(event) {
-  if (playMusic) {
-    // 播放音樂
-    audio.play();
-    // 將狀態設置為已播放音樂
-    playMusic = false;
-  } else {
-    // 暫停音樂
-    audio.pause();
-    // 將狀態設置為已停止音樂
-    playMusic = true;
-    // 重新導向到另一個網頁
-    window.location.href = "home.html";
-  }
-});
-
-playArea.addEventListener("touchstart", function(event) {
-  event.preventDefault(); // 防止預設行為，如滾動
-
-  if (playMusic) {
-    // 播放音樂
-    audio.play();
-    // 將狀態設置為已播放音樂
-    playMusic = false;
-  } else {
-    // 暫停音樂
-    audio.pause();
-    // 將狀態設置為已停止音樂
-    playMusic = true;
-    // 重新導向到另一個網頁
-    window.location.href = "另一個網頁的URL";
-  }
-});
-</script>
-
+    <div class="container mt-5">
+        <!-- 訂單資訊 -->
+        <p>訂單編號：001</p>
+        <p>訂購時間：2024-04-12 10:30</p>
+        <p>訂單狀態：待處理</p>
+        <!-- 播放按鈕 -->
+        <button onclick="playOrderInfo()">播放訂單資訊</button>
+        <!-- 語音播放 -->
+        <audio id="audio" controls style="display: none;">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        function playOrderInfo() {
+            // 訂單資訊文字
+            var orderInfo = "訂單編號：001。訂購時間：2024年4月12日10時30分。訂單狀態：待處理。";
+            
+            // 發送請求獲取語音文件
+            fetch('YOUR_TTS_API_ENDPOINT', {
+                method: 'POST',
+                body: JSON.stringify({ text: orderInfo }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer YOUR_API_KEY'
+                }
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                // 創建URL並設置給<audio>元素
+                var audioURL = URL.createObjectURL(blob);
+                var audio = document.getElementById('audio');
+                audio.src = audioURL;
+                // 播放語音
+                audio.play();
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
 </body>
 </html>
