@@ -11,7 +11,8 @@
     <style>
         /* 更淡藍色背景 */
         body {
-            background-color: #e7f2ff;
+            background-color: #eebc60e8; 
+            
         }
         /* 返回首頁按鈕 */
         .home-link {
@@ -22,7 +23,7 @@
         }
         /* 更淡藍色的表格 */
         .form-container {
-            background-color: #cfe8ff; /* 淡藍色 */
+            background-color: #f3ac27 ;
             border-radius: 10px;
             padding: 20px;
         }
@@ -31,6 +32,9 @@
         .form-control,
         .btn {
             font-size: 24px;
+        }
+        .btn-primary{
+            background-color: #d110a1
         }
     </style>
 </head>
@@ -56,10 +60,16 @@
             <label for="productPrice" class="form-label">價格</label>
             <input type="number" class="form-control" id="productPrice" placeholder="輸入價格" required>
         </div>
-        <button type="submit" class="btn btn-primary">確認上架</button>
+        <button type="submit" class="btn btn-primary" onmouseover="playAudio('audio1')">確認上架</button>
     </form>
+    <audio id="audio1" src="audio\確認上架.m4a"></audio>
 </div>
-
+<script>
+    function playAudio(audioId) {
+      var audio = document.getElementById(audioId);
+      audio.play();
+    }
+  </script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

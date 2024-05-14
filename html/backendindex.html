@@ -39,7 +39,7 @@
     text-decoration: none;
   }
   .btn-container .btn:hover {
-    background-color: #0056b3;
+    background-color: #ff0000;
     transform: scale(1.1);
   }
   .btn-container .play-btn {
@@ -55,7 +55,7 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: #007bff;
+    color: #ff7300;
     cursor: pointer;
   }
   .btn-container .play-btn {
@@ -84,7 +84,18 @@
     font-weight: bold;
 }
 
-
+.btn-container .btn-order {
+  background-color: #ff6f61; /* 訂單按鈕文字顏色 */
+  }
+  .btn-container .btn-upload {
+    background-color: #ffa600; /* 商品上架按鈕文字顏色 */
+  }
+  .btn-container .btn-inventory {
+    background-color: #5cb85c; /* 庫存管理按鈕文字顏色 */
+  }
+  .btn-container .btn-customer {
+    background-color: #007bff; /* 客人按鈕文字顏色 */
+  }
 /* 當按鈕被點擊時 */
 .btn-container .play-btn:active {
   transform: translateY(2px); /* 按下時稍微下移 */
@@ -98,22 +109,22 @@
   <div class="btn-container">
       <audio id="audio1" src="audio\訂單.mp3"></audio>
       <div class="btn-wrapper">
-          <a href="backendorder.html" class="btn"><img width="230" height="230" src="image\image1.png" onmouseover="playAudio('audio1')" alt="訂單">訂單</a>
+          <a href="backendorder.html" class="btn btn-order"><img width="230" height="230" src="image\image1.png" onmouseover="playAudio('audio1')" alt="訂單">訂單</a>
           <button class="play-btn" onclick="playAudio('audio1')"><i class="fas fa-play"></i></button>
       </div>
       <audio id="audio2" src="audio\賣東西.mp3"></audio>
       <div class="btn-wrapper">
-          <a href="Uplaod.html" class="btn"><img src="image\image2.png" onmouseover="playAudio('audio2')" width="210" height="210" alt="商品">商品上架</a>
+          <a href="Uplaod.html" class="btn btn-upload"><img src="image\image2.png" onmouseover="playAudio('audio2')" width="210" height="210" alt="商品">商品上架</a>
           <button class="play-btn" onclick="playAudio('audio2')"><i class="fas fa-play"></i></button>
       </div>
       <audio id="audio3" src="audio\剩多少.mp3"></audio>
       <div class="btn-wrapper">
-          <a href="#" class="btn"><img src="image\image3.png" width="250" height="250" alt="庫存">庫存管理</a>
+          <a href="#" class="btn btn-inventory"><img src="image\image3.png" width="250" height="250" onmouseover="playAudio('audio3')" alt="庫存">庫存管理</a>
           <button class="play-btn" onclick="playAudio('audio3')"><i class="fas fa-play"></i></button>
       </div>
       <audio id="audio4" src="audio\客人.m4a"></audio>
       <div class="btn-wrapper">
-          <a href="#" class="btn"><img src="image\image4.png" width="250" height="250" alt="客人">客人</a>
+          <a href="#" class="btn btn-customer"><img src="image\image4.png" width="250" height="250" onmouseover="playAudio('audio4')" alt="客人">客人</a>
           <button class="play-btn" onclick="playAudio('audio4')"><i class="fas fa-play"></i></button>
       </div>
       <!-- Add more btn-wrapper for other products -->
